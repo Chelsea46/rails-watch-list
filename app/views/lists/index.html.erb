@@ -4,4 +4,7 @@
   <% @lists.each do |list| %>
     <li><%= list.name %>  <%= link_to "Show list", list_path(list) %></li>
   <% end %>
+
+  <%= cl_image_tag("https://res.cloudinary.com/dxhzmzgui/image/upload/v1669387440/cld-sample-2.jpg",
+      width: 400, height: 300, crop: :fill) %>
 </ul>
