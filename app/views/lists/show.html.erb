@@ -1,5 +1,5 @@
 <div class="position-relative">
-  <div class="card-category card-large" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('list_background.jpg') %>)">
+  <div class="card-category card-large" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_tag('list_background.jpg') %>)">
     <h1><%= @list.name %></h1>
   </div>
   <span class="movie-tag"><%= pluralize(@list.movies.size, "movie") %></span>
@@ -38,10 +38,10 @@
 
 <%= render "bookmarks/modal", list: @list, bookmark: @bookmark %>
 
-<ul class="list-group">
-  <% @list.movies.each do |movie| %>
-    <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
-    <li> <%= movie.title%> <%= link_to "Delete", bookmark_path(bookmark), data:{turbo_method: :delete, turbo_confirm: "Are you sure?"} %></li>
-  <% end %>
+<%# <ul class="list-group"> %>
+  <%# @list.movies.each do |movie| %>
+    <%# bookmark = Bookmark.find_by(list: @list, movie: movie) %>
+    <%# <li> = movie.title = link_to "Delete", bookmark_path(bookmark), data:{turbo_method: :delete, turbo_confirm: "Are you sure?"}</li> %>
+  <%# end %>
 
-   <%= link_to "Add Bookmark", new_list_bookmark_path(@list)  %>
+   <%#= link_to "Add Bookmark", new_list_bookmark_path(@list)  %>
