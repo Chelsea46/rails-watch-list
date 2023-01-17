@@ -4,8 +4,11 @@
 
 import { application } from "./application"
 
-import TomSelectController from "./tom_select_controller.js"
+import HelloController from "./hello_controller"
+application.register("hello", HelloController)
+
+import TomSelectController from "./tom_select_controller"
 application.register("tom-select", TomSelectController)
 
-import StarRatingController from "./star_rating_controller.js"
-application.register("star-rating", StarRatingController)
+import TypedJsController from "./typed_js_controller"
+application.register("typed-js", TypedJsController)
